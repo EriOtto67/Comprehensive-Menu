@@ -68,6 +68,9 @@ h1 {
     margin-top: 20px;
 }
 </style>
+
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+
 </head>
 
 <body>
@@ -110,17 +113,17 @@ h1 {
 
     <!-- 問い合わせ -->
 
-    <div class="card" onclick="openTalk()">
+    <div class="card" onclick="sendGasPrice()">
 
-        <div class="card-title">
-            ⛽ガソリン価格確認 ＞
-        </div>
-
-        <div class="card-description">
-            現在のガソリン価格を確認します。
-        </div>
-
+    <div class="card-title">
+        ⛽ガソリン価格確認 ＞
     </div>
+
+    <div class="card-description">
+        現在のガソリン価格を確認します。
+    </div>
+
+</div>
 
     <div class="footer">
         ENEOSサービスメニュー
@@ -130,6 +133,12 @@ h1 {
 
 <script>
 
+const LIFF_ID = "2010920922-51evKItV";
+
+liff.init({
+    liffId: LIFF_ID
+});
+
 function openCustomer() {
     window.location.href = "https://liff.line.me/2010920922-ezMC4vGF";
 }
@@ -138,8 +147,24 @@ function openVoC() {
     window.location.href = "https://liff.line.me/2010920922-MHVBC0L1";
 }
 
-function openTalk() {
-    window.location.href = "https://liff.line.me/2010920922-pIjpB3A3";
+async function sendGasPrice() {
+
+    try {
+
+        await liff.sendMessages([
+            {
+                type: "text",
+                text: ">>ガソリン価格"
+            }
+        ]);
+
+        liff.closeWindow();
+
+    } catch (error) {
+
+        console.error(error);
+
+    }
 }
 
 </script>
