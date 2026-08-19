@@ -39,42 +39,26 @@ h1 {
     margin-bottom: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-top: 4px solid #06C755;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.card:hover,
+.card:active {
+    background: #f9fff9;
 }
 
 .card-title {
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #06C755;
     margin-bottom: 10px;
 }
 
 .card-description {
     color: #666;
     font-size: 14px;
-    margin-bottom: 15px;
     line-height: 1.5;
-}
-
-.menu-button {
-    width: 100%;
-    padding: 12px;
-    background: #ffffff;
-    border: 2px solid #06C755;
-    border-radius: 8px;
-    color: #06C755;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.menu-button:hover {
-    background: #06C755;
-    color: #ffffff;
-}
-
-.menu-button:active {
-    background: #06C755;
-    color: #ffffff;
 }
 
 .footer {
@@ -98,56 +82,44 @@ h1 {
 
     <!-- お客さま情報LINE連携 -->
 
-    <div class="card">
+    <div class="card" onclick="openCustomer()">
+
         <div class="card-title">
-            お客さま情報LINE連携
+            お客さま情報LINE連携 ＞
         </div>
 
         <div class="card-description">
             お客さま情報のLINE連携を行います。
         </div>
 
-        <button
-            class="menu-button"
-            onclick="openCustomer()">
-            開く
-        </button>
     </div>
 
     <!-- VoC -->
 
-    <div class="card">
+    <div class="card" onclick="openVoC()">
+
         <div class="card-title">
-            ご意見・ご要望
+            ご意見・ご要望 ＞
         </div>
 
         <div class="card-description">
             サービス向上のため、ご意見・ご要望をお聞かせください。
         </div>
 
-        <button
-            class="menu-button"
-            onclick="openVoC()">
-            開く
-        </button>
     </div>
 
     <!-- 問い合わせ -->
 
-    <div class="card">
+    <div class="card" onclick="openTalk()">
+
         <div class="card-title">
-            店舗へ問い合わせ
+            店舗へ問い合わせ ＞
         </div>
 
         <div class="card-description">
             店舗へLINEメッセージを送信します。
         </div>
 
-        <button
-            class="menu-button"
-            onclick="openTalk()">
-            開く
-        </button>
     </div>
 
     <div class="footer">
@@ -159,21 +131,15 @@ h1 {
 <script>
 
 function openCustomer() {
-
     location.href = "https://liff.line.me/ここに顧客情報LIFFID";
-
 }
 
 function openVoC() {
-
     location.href = "https://liff.line.me/ここにVoCLIFFID";
-
 }
 
 function openTalk() {
-
     location.href = "https://line.me/R/ti/p/@ここに公式アカウントID";
-
 }
 
 </script>
