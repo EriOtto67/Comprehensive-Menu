@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>尾賀亀LINEサービス</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 20px;
+    background: #f5f5f5;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #d6001c;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.menu-button {
+    width: 100%;
+    padding: 12px;
+    background: #ffffff;
+    border: 2px solid #d6001c;
+    border-radius: 8px;
+    color: #d6001c;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-button:hover {
+    background: #d6001c;
+    color: #ffffff;
+}
+
+.footer {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>尾賀亀LINEサービス</h1>
+
+    <div class="subtitle">
+        ご利用されるサービスを選択してください
+    </div>
+
+    <!-- お客さま情報LINE連携 -->
+
+    <div class="card">
+        <div class="card-title">
+            お客さま情報LINE連携
+        </div>
+
+        <div class="card-description">
+            お客さま情報のLINE連携を行います。
+        </div>
+
+        <button
+            class="menu-button"
+            onclick="openCustomer()">
+            開く
+        </button>
+    </div>
+
+    <!-- VoC -->
+
+    <div class="card">
+        <div class="card-title">
+            ご意見・ご要望
+        </div>
+
+        <div class="card-description">
+            サービス向上のため、ご意見・ご要望をお聞かせください。
+        </div>
+
+        <button
+            class="menu-button"
+            onclick="openVoC()">
+            開く
+        </button>
+    </div>
+
+    <!-- 問い合わせ -->
+
+    <div class="card">
+        <div class="card-title">
+            店舗へ問い合わせ
+        </div>
+
+        <div class="card-description">
+            店舗へLINEメッセージを送信します。
+        </div>
+
+        <button
+            class="menu-button"
+            onclick="openTalk()">
+            開く
+        </button>
+    </div>
+
+    <div class="footer">
+        ENEOSサービスメニュー
+    </div>
+
+</div>
+
+<script>
+
+function openCustomer() {
+
+    location.href = "https://liff.line.me/ここに顧客情報LIFFID";
+
+}
+
+function openVoC() {
+
+    location.href = "https://liff.line.me/ここにVoCLIFFID";
+
+}
+
+function openTalk() {
+
+    location.href = "https://line.me/R/ti/p/@ここに公式アカウントID";
+
+}
+
+</script>
+
+</body>
+</html>
